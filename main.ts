@@ -10,13 +10,13 @@ const DEFAULT_SETTINGS: MyPluginSettings = {
 	mySetting: 'default'
 }
 
-export default class HelloWorldPlugin extends Plugin {
+export default class lockscreenobsi extends Plugin {
 	settings: MyPluginSettings;
 
 	async onload() {
-		// this.addRibbonIcon('dice', 'Greet', () => {
-		// 	new Notice('Hello, world!');
-		//   });
+		this.addRibbonIcon('dice', 'Greet', () => {
+			new Notice('Hello, world!');
+		  });
 		  
 		await this.loadSettings();
 
@@ -112,9 +112,9 @@ class SampleModal extends Modal {
 }
 
 class SampleSettingTab extends PluginSettingTab {
-	plugin: HelloWorldPlugin;
+	plugin: lockscreenobsi;
 
-	constructor(app: App, plugin: HelloWorldPlugin) {
+	constructor(app: App, plugin: lockscreenobsi) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}
